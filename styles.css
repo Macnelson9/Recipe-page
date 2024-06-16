@@ -1,0 +1,247 @@
+/* fonts import links */
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+/* css variables */
+:root {
+  --nutmeg: #854632;
+  --dark-raspberry: #7b284f;
+  --white: #fff;
+  --rose-white: #fff5fa;
+  --eggshell: #f3e6d8;
+  --light-grey: #e4ded8;
+  --wenge-brown: #5f574e;
+  --dark-charcoal: #302d2c;
+}
+
+/* Styles for the attribution links at the bottom of the page */
+.attribution {
+  font-size: 15px;
+  text-align: center;
+  position: relative;
+  top: 80px;
+  color: var(--nutmeg);
+  font-weight: 600;
+  text-shadow: 0px 5px 5px var(--wenge-brown);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* base styling */
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: var(--eggshell);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  color: var(--wenge-brown);
+  height: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  min-height: 1880px;
+}
+
+h1,
+h2 {
+  font-family: "Young Serif", sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+li::marker {
+  color: var(--nutmeg);
+  font-weight: 600;
+}
+
+.prepDiv li::marker {
+  color: var(--dark-raspberry);
+}
+
+/* styling the flex container */
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 30px;
+  background: var(--white);
+  border-radius: 20px;
+  cursor: default;
+}
+
+.image_Container img {
+  width: 100%;
+  height: 20%;
+  border-radius: 10px;
+}
+
+.content h1 {
+  color: var(--dark-charcoal);
+  font-size: 40px;
+}
+
+p.intro {
+  color: var(--wenge-brown);
+  font-weight: 400;
+}
+
+.prepDiv {
+  background: var(--rose-white);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.prepDiv h4 {
+  margin: 10px 0;
+  color: var(--dark-raspberry);
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 23px;
+  line-height: 1.5rem;
+}
+
+li {
+  padding-left: 15px;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  color: var(--nutmeg);
+  font-size: 28px;
+}
+
+hr {
+  margin: 0;
+  color: red;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+.footer p {
+  font-weight: 600;
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.footer span {
+  grid-column: 4 / span 1;
+  color: var(--nutmeg);
+  font-weight: 700;
+}
+
+.footer hr {
+  grid-column: 1 / -1;
+  height: 0px;
+  color: var(--light-grey);
+}
+
+/* media queries */
+
+@media all and (max-width: 1335px) {
+  main {
+    width: 45%;
+  }
+}
+
+@media all and (max-width: 1195px) {
+  main {
+    width: 47%;
+  }
+}
+
+@media all and (max-width: 1144px) {
+  main {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 800px) {
+  main {
+    width: 60%;
+  }
+}
+
+@media all and (max-width: 673px) {
+  main {
+    width: 75%;
+  }
+}
+
+@media all and (max-width: 545px) {
+  main {
+    width: 85%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  main {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 410px) {
+  body,
+  main,
+  html {
+    width: 105%;
+  }
+  .container {
+    flex-wrap: wrap;
+    border-radius: 0;
+    overflow: hidden;
+    width: 103%;
+    padding: 20px;
+  }
+
+  .content h1 {
+    font-size: 35px;
+  }
+
+  .image_Container img {
+    display: block;
+    position: relative;
+    border-radius: 0;
+    width: 450px;
+    height: 220px;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .content h1 {
+    font-size: 30px;
+  }
+
+  P.intro {
+    font-size: 15px;
+    text-wrap: wrap;
+  }
+}
